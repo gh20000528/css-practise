@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #232323;
+        flex-direction: column;
+    }
+    a{
+        text-decoration:none;
+        text-transform: uppercase;
+        font-size: 22px;
+        font-family: Verdana;
+        letter-spacing: 3px;
+        height: 60px;
+        width: 200px;
+        line-height: 60px;
+        text-align: center;
+        color: #fdc518;
+        position: relative;
+        /* border: 2px solid blue; */
+    }
+    a::before{
+        content: '';
+        position: absolute;
+        height: 90px;
+        width: 200px;
+        top:-15px;
+        left: 0;
+        border-left: 2px solid red;
+        border-right: 2px solid #fdc518;
+        transition: all 1s;
+    }
+    a:hover:before{
+        transform: rotateY(180deg);
+    }
+    a::after{
+        content: '';
+        position: absolute;
+        height: 60px;
+        width: 230px;
+        top:0;
+        left: -15px;
+        border-top: 2px solid red;
+        border-bottom: 2px solid #fdc518;
+        transition: all 1s;
+    }
+    a:hover:after{
+        transform: rotateX(180deg);
+    }
+    #two{
+        margin: 50px 0;
+        background-color: #232323;
+        border: none;
+        position: relative;
+        width: 400px;
+        height: 120px;
+        text-transform: uppercase;
+        line-height: 120px;
+        align-items: center;
+        color: blanchedalmond;
+        font-size: 45px;
+        letter-spacing: 15px;
+        overflow: hidden;
+    }
+    #two::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        transition: all 0.3s;
+    }
+    #two:hover:before{
+        transform: translateX(100%);
+    }
+    #two::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        transition: all 0.5s;
+        transition-delay: .6s;
+    }
+    #two:hover::after{
+        transform: translateX(-100%);
+    }
+    .line::after{
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #fff;
+        transition: all 0.5s;
+        transition-delay: .3s;
+    }
+    #two:hover .line:after{
+        transform: translateY(100%);
+    }
+    .line::before{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #fff;
+        transition: all 0.5s;
+        transition-delay: .9s;
+    }
+    #two:hover .line::before{
+        transform: translateY(-100%);
+    }
+</style>
+<body>
+    <a href="#">hover me</a>
+    <button id="two">
+        button 
+        <span class="line"></span>
+    </button>
+</body>
+</html>

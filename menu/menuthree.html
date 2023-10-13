@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ccc;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* ul li{
+        position: relative;
+    } */
+
+    ul li a{
+        display: block;
+        line-height: 40px;
+        color: red;
+        padding: 10px 30px;
+        font-size: 20px;
+        text-transform: capitalize;
+        transition: all .5s;
+        position: relative;
+    }
+    ul li span{
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: #262626;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        transform: scaleY(0);
+        transition: all .5s;
+        transform-origin: top;
+    }
+    /* li:hover span{
+        transform: scaleY(1);
+    } */
+    a:hover span{
+        transform: scaleY(1);
+    }
+    a:hover{
+        color: #ccc;
+    }
+    span:nth-child(2){
+        left: 25%;
+        transition-delay: .15s;
+    }
+    span:nth-child(3){
+        left: 50%;
+        transition-delay: .3s;
+    }
+    span:nth-child(4){
+        left: 75%;
+        transition-delay: .45s;
+    }
+
+
+</style>
+<body> 
+    <ul>
+        <li>
+            <a href="">Home
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </li>
+        <li>
+            <a href="">News
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </li>
+        <li>
+            <a href="">About
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </li>
+        <li>
+            <a href="">My profile
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </li>
+        <li>
+            <a href="">Login
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
